@@ -31,11 +31,13 @@ public protocol PIPProtocol {}
 public class VideoQuality {
     public var type: VideoQualityType
     public var url: URL
+    public var bandwidth: Double
     public var resolution: CGSize
     
-    public init(type: VideoQualityType, url: URL, resolution: CGSize) {
+    public init(type: VideoQualityType, url: URL, bandwidth: Double, resolution: CGSize) {
         self.type = type
         self.url = url
+        self.bandwidth = bandwidth
         self.resolution = resolution
     }
 }
