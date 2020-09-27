@@ -121,7 +121,7 @@ open class VersaPlayer: AVPlayer, AVAssetResourceLoaderDelegate {
         }
         if let url = (item?.asset as? AVURLAsset)?.url {
             if currentQuality == nil {
-                currentQuality = .init(type: .auto, url: url, bandwidth: 0, resolution: .zero)
+                currentQuality = .init(type: .auto, name: "player.qualities.auto.title", url: url, bandwidth: 0, resolution: .zero)
             }
             if availableQualities.isEmpty {
                 availableQualities = [currentQuality!]
